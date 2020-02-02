@@ -1,7 +1,7 @@
 # Flutter state management has never been easier
 # Show cases
 
-A new Flutter project.
+A modified Flutter project.
 
 ## Getting Started
 
