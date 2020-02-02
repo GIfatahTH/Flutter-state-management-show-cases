@@ -9,11 +9,16 @@ jobs:
 
     container:
       image:  google/dart:latest
+      
+    strategy:    
+      matrix:
+        channel: ["stable", "beta"]
+      
     steps:
      - uses: actions/checkout@v2
      - uses: subosito/flutter-action@v1
        with:
-         channel: 'stable'
+         channel: ${{ matrix.channel }}
 
      - run: flutter pub get
      - run: flutter test
